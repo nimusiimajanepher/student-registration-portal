@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MUST - Registration & Details</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="login-container" style="max-width: 600px;">
+        
+        <div class="portal-header">
+            <h1>Applicant Registration & Details</h1>
+            <p>Mbarara University of Science & Technology</p>
+        </div>
+
+        <p style="text-align: left; margin-bottom: 20px; font-size: 14px; color: #666;">
+            Please enter your official registration details below.
+        </p>
+
+        <!-- Registration Form with an ID -->
+        <form id="reg-form">
+            <label for="firstname">First Name</label>
+            <input type="text" id="firstname" name="firstname" placeholder="Enter first name" required>
+
+            <label for="surname">Surname</label>
+            <input type="text" id="surname" name="surname" placeholder="Enter surname" required>
+
+            <label for="reg-email">Email Address</label>
+            <input type="email" id="reg-email" name="email" placeholder="applicant@must.ac.ug" required>
+
+            <label for="entry-scheme">Entry Scheme</label>
+            <select id="entry-scheme" name="entry_scheme" required>
+                <option value="" disabled selected>Select admission level</option>
+                <option value="Direct A-Level">Direct Entry (A-Level)</option>
+                <option value="Diploma Holder">Diploma Holder</option>
+                <option value="Postgraduate">Postgraduate</option>
+            </select>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="+256 700 000000" required>
+
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="reg-password">Create Password</label>
+            <input type="password" id="reg-password" name="password" placeholder="Choose a password" required>
+
+            <button type="submit">Submit Registration Details</button>
+        </form>
+
+        <div style="margin-top: 20px; text-align: center;">
+            <a href="index.html" style="color: #c0392b; text-decoration: none; font-size: 14px; font-weight: bold;">Back to Login</a>
+        </div>
+
+        <div class="footer">
+            <p>Faculty of Computing & Informatics &bull; MUST</p>
+        </div>
+
+    </div>
+
+    <!-- Clean script block that saves data reliably -->
+    <script>
+        document.getElementById('reg-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const email = document.getElementById('reg-email').value.trim();
+            const password = document.getElementById('reg-password').value.trim();
+
+            // Save to browser memory
+            localStorage.setItem('savedEmail', email);
+            localStorage.setItem('savedPassword', password);
+
+            alert('Account created successfully! You can now log in.');
+            window.location.href = 'index.html';
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eaf2f8;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.portal-header {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    color: #1a5276;
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+p {
+    text-align: center;
+    color: #666666;
+    font-size: 14px;
+    margin: 0;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #333333;
+    font-size: 13px;
+}
+
+input, select {
+    width: 100%;
+    margin: 0;
+    padding: 12px;
+    border: 1px solid #cccccc;
+    box-sizing: border-box;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #1a5276;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 22px;
+    background-color: #1a5276;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #154360;
+}
+
+.footer {
+    margin-top: 25px;
+    font-size: 12px;
+    text-align: center;
+    color: #888888;
+    border-top: 1px solid #eeeeee;
+    padding-top: 15px;
+}
